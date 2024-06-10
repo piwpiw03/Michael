@@ -1,0 +1,186 @@
+@import url("https://fonts.cdnfonts.com/css/cloud-groovy");
+
+:root {
+  --primary-color: #ffb6c1;
+  --secondary-color: #000;
+  --text-color: #fff;
+  --background-image-url: url('https://pbs.twimg.com/media/EXtLhLfVcAEpDG4.jpg');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  color: #333;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+header {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: var(--primary-color);
+}
+
+.hero {
+  height: 100vh;
+  background: var(--background-image-url) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+  padding-top: 60px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Cloud Groovy", sans-serif;
+  color: var(--secondary-color);
+  text-shadow: var(--primary-color) 2px 2px 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: "Cloud Groovy", sans-serif;
+  text-shadow: var(--primary-color) 2px 2px 20px;
+  color: var(--secondary-color);
+}
+
+.btn {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-color);
+}
+
+section {
+  padding: 4rem 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-grid,
+.artist-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.news-item,
+.artist {
+  background: var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: calc(33% - 2rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border-style: solid;
+  border-color: var(--secondary-color);
+  font-family: "Cloud Groovy", sans-serif;
+  font-size: 30px;
+}
+
+.news-item,
+p {
+  font-family: "Cloud Groovy", sans-serif;
+  font-size: 30px;
+}
+
+.news-item:hover,
+.artist:hover {
+  transform: translateY(-10px);
+}
+
+.news-item img,
+.artist img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
